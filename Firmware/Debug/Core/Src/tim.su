@@ -1,0 +1,7 @@
+../Core/Src/tim.c:10:6:MX_TIM2_Init	104	static
+../Core/Src/tim.c:94:6:MX_TIM4_Init	72	static
+../Core/Src/tim.c:145:6:analogWrite	24	static
+../Core/Src/tim.c:194:6:analogWrite_ch1	32	static
+../Core/Src/tim.c:227:6:analogWrite_ch2	32	static
+../Core/Src/tim.c:258:6:analogWrite_ch3	32	static
+../Core/Src/tim.c:289:6:analogWrite_ch4	32	static

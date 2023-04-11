@@ -1,0 +1,2 @@
+../Core/Src/uart.c:9:6:MX_USART1_UART_Init	40	static
+../Core/Src/uart.c:55:6:MX_USART3_UART_Init	40	static
