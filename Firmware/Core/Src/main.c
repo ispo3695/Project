@@ -33,7 +33,7 @@
 #include <sysclk.h>
 #include <tim.h>
 #include <uart.h>
-
+#include <string.h>
 
 extern ADC_HandleTypeDef hadc1;
 extern TIM_HandleTypeDef htim2;
@@ -323,10 +323,7 @@ PUTCHAR_PROTOTYPE
 }
 
 
-void strclr(char *s)
-{
-	*s = '\0';
-}
+
 
 
 
@@ -806,8 +803,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 					}
 
 				}
-				strclr(uart1.rxbuf);
-				// strclr(uart3.txbuf);
+				bzero(uart1.rxbuf,sizeof(uart1.rxbuf));
+
 				uart1.rxcnt = 0;
 
 			}
@@ -830,7 +827,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 
 			uart1.rxcnt = 0;
-			strclr(uart1.rxbuf);
+		    bzero(uart1.rxbuf,sizeof(uart1.rxbuf));
 
 
 		}
@@ -1150,10 +1147,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 					{
 
 						sel = '\0';
-
-
 						uint32_t Pwm_Step = atoi(uart3.rxbuf);
-
 						analogWrite(Pwm_Step);
 						printf("All Motor PWM STEP : %d\n",Pwm_Step) ;
 
@@ -1165,8 +1159,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 
 				}
 
-				strclr(uart3.rxbuf);
-				//  strclr(uart1.txbuf);
+				bzero(uart3.rxbuf,sizeof(uart1.rxbuf));
+
 				uart3.rxcnt = 0;
 
 			}

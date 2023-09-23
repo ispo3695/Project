@@ -60,8 +60,8 @@ all: main-build
 main-build: Car\ Project-f103c8.elf secondary-outputs
 
 # Tool invocations
-Car\ Project-f103c8.elf Car\ Project-f103c8.map: $(OBJS) $(USER_OBJS) C:\Users\OH\ SUN\ CHUL\Desktop\STM32\ Dev\Car\ Project-f103c8\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Car Project-f103c8.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\OH SUN CHUL\Desktop\STM32 Dev\Car Project-f103c8\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Car Project-f103c8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Car\ Project-f103c8.elf Car\ Project-f103c8.map: $(OBJS) $(USER_OBJS) C:\download\Project\Firmware\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Car Project-f103c8.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\download\Project\Firmware\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Car Project-f103c8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
